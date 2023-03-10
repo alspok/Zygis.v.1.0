@@ -6,12 +6,13 @@ class InitValues():
     input_file_names = [
         # "Action_PriceList_2_1_2023_EN.csv",
         # "eeteuroparts.csv",
-        "DataInputFiles\stock_export_full_for_zygimantas@ademi.lt.xml"
+        "stock_export_full_for_zygimantas@ademi.lt.xml"
     ]
 
     merge_file_names =[
         f"{output_path}Action_PriceList_2_1_2023_EN.csv.mod.csv",
-        f"{output_path}eeteuroparts.csv.mod.csv"
+        f"{output_path}eeteuroparts.csv.mod.csv",
+        f"{output_path}stock_export_full_for_zygimantas@ademi.lt.mod.xml"
     ]
 
     merge_file_name = f"{merge_path}MergeFile.mod.csv"

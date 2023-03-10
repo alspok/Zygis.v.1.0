@@ -81,15 +81,15 @@ class ModifyCSV():
 
         # xml file to modify
         elif "ademi.lt.xml" in file_name:
-            with open(file_name, mode='r', encoding='utf-8') as xml_fh:
+            with open(f"{iv.input_path}{file_name}", mode='r', encoding='utf-8') as xml_fh:
                 xml_date = xml_fh.read()
 
             xml_dict = xmltodict.parse(xml_date)
 
             xml_dict_list =[]
             [xml_dict_list.append(dict(x)) for x in xml_dict['offer']['products']['product']]
-            for item in xml_dict_list:
-                pprint.pprint(item)
+            with open(f"{iv.output_path}{file_name}.dict.txt", mode='w', encoding='utf-8') as dict_fh:
+                pprint.pprint(xml_dict_list, stream=dict_fh)
 
         else:
             print(f"No file {file_name} in directory")
